@@ -1,0 +1,58 @@
+<!-- <h1 style="text-align: center;">About page</h1> -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div style="text-align:center;">
+            <!-- <a class="btn btn-primary" type="button" routerLink="/home" routerLinkActive="active">Go to Home</a> -->
+            <!-- <button>Item: {{item}}</button> -->
+         </div>
+    
+    </div>
+</nav>
+
+
+<!-- <button type="button" class="btn btn-success"
+        popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        <div *ngFor="let item of items">
+            <p>
+                {{item}}
+            </p>
+        </div>
+</button> -->
+
+<!-- 
+<button style="text-align: center;" type="button" class="btn btn-success"
+        popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> -->
+<!--         
+<button type="button" data-toggle="popover" class="btn btn-info"  #txt title="{{Messg}}">
+        <div>
+            <p>
+               Message from Home :{{Messg}}
+            </p>
+        </div>
+        <button style="box-sizing: border-box;" popover="openedit()"> Edit</button>
+</button> -->
+
+
+
+<button type="button" class="btn btn-default btn-primary"
+   popover="{{Messg}}"
+   popoverTitle="popover" 
+   placement="right"  [outsideClick]="true"
+   >
+   <!-- <p>
+    Message from Home :{{Messg}}
+ </p> -->
+ Click this button to see 
+ <br>message in popover<br>
+ <button style="box-sizing: border-box;" (popover)="openedit()"> Edit</button>
+
+</button> 
+
+<br><br><br><br><br>
+<div class="row">
+  <div class="col-md-2">
+    <button type="button" class="btn btn-info"
+            popover="{{Messg}}"
+            triggers="mouseenter:mouseleave">
+      Hover over me!
+    </button>

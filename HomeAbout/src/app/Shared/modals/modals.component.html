@@ -1,0 +1,56 @@
+
+
+<div class="modal-header" >
+    <!-- <h4 class="modal-title pull-left">{{title}}</h4> -->
+    <!-- <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <ul *ngIf="list.length">
+      <li *ngFor="let item of list">{{item}}</li>
+
+    </ul> -->
+
+
+
+
+<form name="myForm">
+    <p>Add any Input here...</p>
+            <!-- <input type="text"> -->
+           <div class="form-group">
+            <label>Text:</label>
+            <!-- <input type="text" class="form-control" id="name" name="post" #txt title="Must not contain special characters and Numbers" formControlText="text"> -->  
+            <input class="form-control" type="text"  id="name" name="post" ng-required ="true" [(ngModel)]="post" >  
+            <span *ngIf="post.length==0"  ng-show="myForm.post.$invalid"  class="req" >
+              This is the required field.
+          </span>         
+          </div>
+  <div class="modal-footer">
+    <!-- <button type="submit" class="btn btn-dark" routerLink="/about">Submit</button> -->
+    <button type="submit" class="btn btn-dark" (click)="sendmsgtoAbout()" >{{submit}}</button>
+
+    <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
+  </div>
+</form>
+  
+
+  <!-- <div class="modal-body">
+    <h4>Add Item</h4>
+    <form  (ngSubmit)="saveToList(value)">
+        <div class="col-md-6">
+            <label>Number of Items : </label> {{numberOfItems}}
+        </div>
+        <div class="col-md-6">
+            <label>Item Name</label>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" formControlName="name">
+            <button class="button mt-1" type="submit">Save</button>
+        </div>
+    </form>
+<div> -->
+
+  
+
+     
